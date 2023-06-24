@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="lovely prompts">
+    <meta name="description" content="The site offers a variety of prompts for neural networks: prompts that create thought chains; prompts for learning foreign languages; prompts for interviews preparing.">
+    <meta name="keywords" content="prompts, AI, neural networks">
+
+    <link rel="shortcut icon" href="./assets/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/mediaControls.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Lovely prompts</title>
+</head>
+<body>
+    <input id="light" class="color-scheme-button" name="color-scheme" type="radio" checked/>
+    <input id="dark" class="color-scheme-button" name="color-scheme" type="radio"/>
+    <input id="blue" class="color-scheme-button" name="color-scheme" type="radio"/>
+    <input id="high-contrast" class="color-scheme-button" name="color-scheme" type="radio"/>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__logo">
+                <audio src="./assets/music/lovely-mix.mp3" controls loop></audio>
+            </div>
+            <nav class="header__menu">
+                <li class="header__list_1">
+                    <div class="color-scheme-wrapper">
+                        <div class="color-scheme-dropdown">
+                            <input id="show-color-schemes" type="checkbox" />
+                            <label for="show-color-schemes" >
+                              <span class="show">Show</span><span class="hide">Hide</span>&nbsp;color&nbsp;schemes:
+                              <span class="icon-btn">
+                                <span class="icon"></span>
+                              </span>
+                            </label> 
+                        <div class="color-scheme-dropdown-inner">
+                        <label id="light-label" class="color-scheme-label" for="light">
+                          <span class="dark-mode-hide">Light mode</span>
+                          <span class="light-mode-hide">Dark mode</span>
+                        </label>  
+                        <label id="dark-label" class="color-scheme-label" for="dark">
+                          <span class="light-mode-hide">Light mode</span>
+                          <span class="dark-mode-hide">Dark mode</span>
+                        </label>
+                        <label id="blue-label" class="color-scheme-label" for="blue">
+                          Blue mode
+                        </label>
+                        <label id="high-contrast-label" class="color-scheme-label" for="high-contrast">
+                          High contrast
+                        </label>
+                    </div>
+                </div>
+            </div>
+                </li>
+            </nav>
+        </header>
+        <main class="main">
+            <aside class="sidebar">
+                <nav class="sidebar__menu">
+                    <ul class="sidebar__lists">
+                        <ul class="sidebar__lists">
+                            <li class="sidebar__item"><a href="#thinking" class="sidebar__link">Creating thinking chains</a></li>
+                            <li class="sidebar__item"><a href="#languages" class="sidebar__link">Learning natural languages</a></li>
+                            <li class="sidebar__item"><a href="#uninteresting" class="sidebar__link">Delegate social activities</a></li>
+                            <li class="sidebar__item"><a href="#schedule" class="sidebar__link">Create a daily / weekly schedule</a></li>
+                            <li class="sidebar__item"><a href="#exploring" class="sidebar__link">Exploring common ideas</a></li>
+                            <li class="sidebar__item"><a href="#code" class="sidebar__link">Create / edit code</a></li>
+                            <!-- <li class="sidebar__item"><a href="#conversations" class="sidebar__link">Preparing for conversations</a></li> -->
+                            <li class="sidebar__item"><a href="#other" class="sidebar__link">Other</a></li>
+                        </ul>
+                    </ul>
+                </nav>
+            </aside>
+            <section class="content">
+                <section class="content">
+                    <section class="content__section  audio" id="thinking">
+                        <h2 class="audio__title title">Creating Thinking Chains</h2>
+
+                        <div class="audio__items">
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">вменяемый UI карточки</span>
+                                    <p id="card-text-1" class="card__text">Simulate three brilliant, logical experts collaboratively answering a question. Each one verbosely explains their thought process in real-time, considering the prior explanations of others and openly acknowledging mistakes. At each step, whenever possible, each expert refines and builds upon the thoughts of others, acknowledging their contributions.<br><br>The question is: " .... "</p>
+                                    <button id="copy-button" onclick="copyText(1)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Quantum Biology</span>
+                                    <p id="card-text-2" class="card__text">Simulate an in-depth discussion between expertA and expertB in the area of ".....". The discussion can contain a maximum of 10 responses from each. One suggests a method, the other criticizes and suggests an improved approach, and so on and so forth.</p>
+                                    <button id="copy-button" onclick="copyText(2)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Поиск по общим терминам</span>
+                                    <p id="card-text-3" class="card__text">Imagine a conversation between two experts: ExpertA and ExpertB Both are expert in expert in and have deep expert knowledge related to the following fields: ....</p>
+                                    <button id="copy-button" onclick="copyText(3)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Persanal Coach</span>
+                                    <p id="card-text-4" class="card__text"></p>
+                                    <button id="copy-button" onclick="copyText(4)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Откройте ChatGPT</span>
+                                    <p id="card-text-5" class="card__text">  </p>
+                                    <button id="copy-button" onclick="copyText(5)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Google ad word keyword planner</span>
+                                    <p id="card-text-6" class="card__text">  </p>
+                                    <button id="copy-button" onclick="copyText(6)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+            
+                    <section class="content__section  audio" id="languages">
+                        <h2 class="audio__title title">Learning Natural Languages</h2>
+
+                        <div class="audio__items">
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Promt 1</span>
+                                    <p id="card-text-14" class="card__text">Write a short story using as many [gerunds / non-count nouns, etc.] as possible.</p>
+                                    <button id="copy-button" onclick="copyText(14)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Promt 2</span>
+                                    <p id="card-text-15" class="card__text">Write a conversation between [person 1] and [person 2] about [subject].</p>
+                                    <button id="copy-button" onclick="copyText(15)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Promt 3</span>
+                                    <p id="card-text-16" class="card__text">Write 10 example sentences using [tense / grammar form, etc.].</p>
+                                    <button id="copy-button" onclick="copyText(16)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Promt 4</span>
+                                    <p id="card-text-17" class="card__text">Generate a [vocabulary list / practice test]  for [TOEFL / IELTS].</p>
+                                    <button id="copy-button" onclick="copyText(17)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Promt 5</span>
+                                    <p id="card-text-18" class="card__text">Can you write 10 words with initial and final consonant clusters?</p>
+                                    <button id="copy-button" onclick="copyText(18)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Promt 6</span>
+                                    <p id="card-text-19" class="card__text">Can you make a list of the most popular phrasal verbs and provide definitions and examples?</p>
+                                    <button id="copy-button" onclick="copyText(19)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Promt 7</span>
+                                    <p id="card-text-20" class="card__text">Make a list of common words with the R sound at the beginning, middle, and end.</p>
+                                    <button id="copy-button" onclick="copyText(20)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Promt 8</span>
+                                    <p id="card-text-21" class="card__text">Can you give me feedback on my writing sample, including suggestions for improvement and corrections of any grammatical errors?</p>
+                                    <button id="copy-button" onclick="copyText(21)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Promt 9</span>
+                                    <p id="card-text-22" class="card__text">Provide examples of complex sentence structures that are commonly used in academic writing.</p>
+                                    <button id="copy-button" onclick="copyText(22)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Promt 10</span>
+                                    <p id="card-text-23" class="card__text">Rewrite this text in the passive voice. [add text]</p>
+                                    <button id="copy-button" onclick="copyText(23)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Promt 11</span>
+                                    <p id="card-text-24" class="card__text">Please give the most commonly used  expressions in [insert proffesion].</p>
+                                    <button id="copy-button" onclick="copyText(24)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Promt 12</span>
+                                    <p id="card-text-26" class="card__text">Can you translate "[phrase]" in the context of [event] into [language]?</p>
+                                    <button id="copy-button" onclick="copyText(26)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+            
+                    <section class="content__section  audio" id="uninteresting">
+                        <h2 class="audio__title title">Delegate Uninteresting Social Activities</h2>
+
+                        <div class="audio__items">
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">вменяемый UI карточки</span>
+                                    <p id="card-text-27" class="card__text">Can you write [profile type] for me, emphasizing [interests/personality] in a way that will attract [the audience]?</p>
+                                    <p class="card__text"><br>Example:<br><br>Can you write a dating profile for me, emphasizing my interests/personality in a way that will attract enterprising and open-minded people?</p>
+                                    <button id="copy-button" onclick="copyText(27)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Quantum Biology</span>
+                                    <p id="card-text-28" class="card__text">Can you write me [number of] email subject lines for [email type] for [target audience]?</p>
+                                    <p class="card__text"><br>Example:<br><br>Can you write me a 10 line email subject line to remind me to pay my tenant?</p>
+                                    <button id="copy-button" onclick="copyText(28)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Поиск по общим терминам</span>
+                                    <p id="card-text-29" class="card__text">Can you write [type of text] on [topic]  [additional information]?</p>
+                                    <p class="card__text"><br>Example:<br><br>Can you write a research paper on mental health in the workplace, exploring the prevalence and impact of stress and emotional burnout?</p>
+                                    <button id="copy-button" onclick="copyText(29)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Возьмите первые 5-15 вопросов</span>
+                                    <p id="card-text-30" class="card__text">Can you write an argument [for/against]  [topic] from different points of view. Before you do this, please state the characteristics of the various characters?</p>
+                                    <p class="card__text"><br>Example:<br><br>Can you write a dating profile for me, emphasizing my interests/personality in a way that will attract enterprising and open-minded people?</p>
+                                    <button id="copy-button" onclick="copyText(30)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Откройте ChatGPT</span>
+                                    <p id="card-text-31" class="card__text">Can you write [type of text] for [topic] in [place], a description of the [benefits] offered by [subject]?</p>
+                                    <p class="card__text"><br>Example:<br><br>Can you write a brochure for a tourist destination in Hawaii, talking about the beautiful beaches, delicious local food and exciting outdoor activities the island offers?</p>
+                                    <button id="copy-button" onclick="copyText(31)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Google ad word keyword planner</span>
+                                    <p id="card-text-32" class="card__text">I want the cover letter to have a more [adjective] tone, as I will be applying to a [type of company] company. Following is my résumé [resume]. Following is the job description [job description]</p>
+                                    <button id="copy-button" onclick="copyText(32)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Google ad word keyword planner</span>
+                                    <p id="card-text-33" class="card__text">Convert the text into a list of tweets (= Twitter thread). The first tweet should be clear and engaging. Each tweet should flow smoothly into the next, building anticipation and momentum. The last tweet should be impactful so that the user can reflect on the whole thread. Make sure each tweet doesn't exceed 280 characters. Don't add a single hashtag to any of the tweets.<br><br>Text: " .... "</p>
+                                    <button id="copy-button" onclick="copyText(33)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Google ad word keyword planner</span>
+                                    <p id="card-text-32" class="card__text">Rewrite the following text as a concise and friendly message, phrased as a question. This should be written in a way that it can be sent in a chat application like Slack.<br><br>Text: " .... "</p>
+                                    <button id="copy-button" onclick="copyText(34)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Google ad word keyword planner</span>
+                                    <p id="card-text-32" class="card__text">I want the cover letter to have a more [adjective] tone, as I will be applying to a [type of company] company. Following is my résumé [resume]. Following is the job description [job description]</p>
+                                    <button id="copy-button" onclick="copyText(32)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+            
+                    <section class="content__section  audio" id="schedule">
+                        <h2 class="audio__title title">Create a Daily / Weekly Schedule</h2>
+
+                        <div class="audio__items">
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Card 1</span>
+                                    <p class="card__text" id="card-text-40">Act as a .... mentor who develops the curriculum for the student to help them learn ..... You will be given the student's goal, time, and resource preferences. You will create a syllabus with volumes and links to resources. Include only appropriate resources because time is limited. My first request is, "I want to become an expert in ...., but I don't know how to ....  . I can study .... hours a week and I only need .... resources . I want to learn how to program in python . Make a curriculum for me."</p>
+                                    <button id="copy-button" onclick="copyText(40)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Card 2</span>
+                                    <p class="card__text" id="card-text-41">Design a spaced repetition schedule for me to effectively review [topic or skill] over time, ensuring better retention and recall.</p>
+                                    <button id="copy-button" onclick="copyText(41)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Card 3</span>
+                                    <p class="card__text" id="card-text-42">I will give you a list of tasks that I need to complete and I would like you to put these into a timetable for the day. My day will start at 6:30am and will end at 7pm. My tasks include</p>
+                                    <button id="copy-button" onclick="copyText(42)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Card 4</span>
+                                    <p class="card__text" id="card-text-43">Imagine being a productivity expert. I want you to organize my week. This week I need to do: <br>Sunday — ....; <br>Monday — ....; <br>Tuesday — ....; <br>Wednesday — ....; <br>Thursday — ....; <br>Friday — ....; <br>Saturday — .... . <br>Below is the output format for Monday, and your answer should include the output format for each day of the week.  <br>Example output: "Monday Work: 8am to 3pm (7 hours) Exercise: 6pm to 7pm (1 hour) Project work: 7pm to 9pm (2 hours) Rest: 9pm to 10pm (1 hour)"</p>
+                                    <button id="copy-button" onclick="copyText(43)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Card 5</span>
+                                    <p class="card__text" id="card-text-44">  </p>
+                                    <button id="copy-button" onclick="copyText(44)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Card 6</span>
+                                    <p class="card__text" id="card-text-45">  </p>
+                                    <button id="copy-button" onclick="copyText(45)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+            
+                    <section class="content__section  audio" id="exploring">
+                        <h2 class="audio__title title">Exploring Common Ideas</h2>
+
+                        <div class="audio__items">
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Card 1</span>
+                                    <p class="card__text" id="card-text-53">Can you write an argument [for/against]  [topic] from different points of view. Before you do this, please state the characteristics of the various characters?</p>
+                                    <p class="card__text"><br>Example:<br><br>Can you write an argument against the use of plastic bags from different perspectives? Before you do this, state the characteristics of the various characters.</p>
+                                    <button id="copy-button" onclick="copyText(53)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Card 2</span>
+                                    <p class="card__text" id="card-text-54">Can you find some practical ways to [practice] the skill without joining a course or community? Create 7 daily tasks to achieve my goal.</p>
+                                    <p class="card__text"><br>Example:<br><br>Can you find any practical ways to practice Kundalini meditation without joining a course or community? Create a daily challenge to achieve my goal.</p>
+                                    <button id="copy-button" onclick="copyText(54)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Card 3</span>
+                                    <p class="card__text" id="card-text-55">Can you create [an analogy] for [concept]?</p>
+                                    <p class="card__text"><br>Example:<br><br>Can you draw an analogy to the concept of growth? Can you draw an analogy with the concept of perspective?</p>
+                                    <button id="copy-button" onclick="copyText(55)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Card 4</span>
+                                    <p class="card__text" id="card-text-56">Brainstorm 5 project ideas based on the text. Make sure the ideas are distinct from one another.<br><br>Text: " .... "</p>
+                                    <button id="copy-button" onclick="copyText(56)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Card 5</span>
+                                    <p class="card__text" id="card-text-57">Give me 10 alternative versions of the text. Ensure that the alternatives are all distinct from one another.<br><br>Text: " .... "</p>
+                                    <button id="copy-button" onclick="copyText(57)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Card 6</span>
+                                    <p class="card__text" id="card-text-58">Extract all facts from the text and summarize it in all relevant aspects in up to seven bullet points and a 1-liner summary. Pick a good matching emoji for every bullet point.<br><br>Text: " .... "</p>
+                                    <button id="copy-button" onclick="copyText(58)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Card 7</span>
+                                    <p class="card__text" id="card-text-59"> Identify the 20% of [topic or skill] that will yield 80% of the desired results and provide a focused learning plan to master it.<br><br>Text: " .... "</p>
+                                    <button id="copy-button" onclick="copyText(59)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Card 8</span>
+                                    <p class="card__text" id="card-text-60">Explain [topic or skill] in the simplest terms possible as if teaching it to a complete beginner. Identify gaps in my understanding and suggest resources to fill them.<br><br>Text: " .... "</p>
+                                    <button id="copy-button" onclick="copyText(60)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Card 9</span>
+                                    <p class="card__text" id="card-text-61">Transform key concepts or lessons from [topic or skill] into engaging stories or narratives to help me better remember and understand the material.<br><br>Text: " .... "</p>
+                                    <button id="copy-button" onclick="copyText(61)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+            
+                    <section class="content__section  audio" id="code">
+                        <h2 class="audio__title title">Create / Edit Code</h2>
+
+                        <div class="audio__items">
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Card 1</span>
+                                    <p class="card__text" id="card-text-66">I want you to act as a Senior Frontend developer. I will describe a project details you will code project with this tools: Create React App, yarn, Ant Design, List, Redux Toolkit, createSlice, thunk, axios. You should merge files in single index.js file and nothing else. Do not write explanations. My first request is ...</p>
+                                    <button id="copy-button" onclick="copyText(66)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Card 2</span>
+                                    <p class="card__text" id="card-text-67">Convert the following code into Tailwind CSS classees and give me the result in a code block. Make sure to remove any browser prefixes. Only give me what I can put into my HTML elements `class` properties.<br><br>Code: " .... "</p>
+                                    <button id="copy-button" onclick="copyText(67)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Card 3</span>
+                                    <p class="card__text" id="card-text-68">Your role is to generate regular expressions that match specific patterns in text. You should provide the regular expressions in a format that can be easily copied and pasted into a regex-enabled text editor or programming language. Generate a regular expression that matches</p>
+                                    <button id="copy-button" onclick="copyText(68)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Card 4</span>
+                                    <p class="card__text" id="card-text-69">Suggest descriptive and meaningful names for variables and functions, making it easier to understand the purpose of each element in your code.<br><br>Code: " .... "</p>
+                                    <button id="copy-button" onclick="copyText(69)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Card 5</span>
+                                    <p class="card__text" id="card-text-70">Find any bugs in the following code.<br><br>Code: " .... "</p>
+                                    <button id="copy-button" onclick="copyText(70)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Card 6</span>
+                                    <p class="card__text" id="card-text-71">Find any bugs in the following code.<br><br>Code: " .... "</p>
+                                    <button id="copy-button" onclick="copyText(71)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Card 7</span>
+                                    <p class="card__text" id="card-text-72">Review the following [language] code for code smells and suggest improvements.<br><br>Code: " .... "</p>
+                                    <button id="copy-button" onclick="copyText(72)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Card 8</span>
+                                    <p class="card__text" id="card-text-73">Act as a software engineer debugging its code. Add debug statements to the code. Add as many as necessary to make debugging easier.<br><br>Code: " .... "</p>
+                                    <button id="copy-button" onclick="copyText(73)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Card 9</span>
+                                    <p class="card__text" id="card-text-74">Convert the HTML code to Mardown.<br><br>HTML code: " .... "</p>
+                                    <button id="copy-button" onclick="copyText(74)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+            
+                    <!-- <section class="content__section  audio" id="conversations">
+                        <h2 class="audio__title title">Preparing for Conversations / Interviews</h2>
+
+                        <div class="audio__items">
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Card 1</span>
+                                    <p class="card__text" id="card-text-79">Can you mimic an interview for [job title] by asking and answering questions as if you were a potential employer?</p>
+                                    <button id="copy-button" onclick="copyText(79)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Card 2</span>
+                                    <p class="card__text" id="card-text-80">  </p>
+                                    <button id="copy-button" onclick="copyText(80)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Card 3</span>
+                                    <p class="card__text" id="card-text-81"> </p>
+                                    <button id="copy-button" onclick="copyText(81)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Card 4</span>
+                                    <p class="card__text" id="card-text-82">  </p>
+                                    <button id="copy-button" onclick="copyText(82)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Card 5</span>
+                                    <p class="card__text" id="card-text-83">  </p>
+                                    <button id="copy-button" onclick="copyText(83)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Card 6</span>
+                                    <p class="card__text" id="card-text-84">  </p>
+                                    <button id="copy-button" onclick="copyText(84)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section> -->
+                    
+                    <section class="content__section  audio" id="other">
+                        <h2 class="audio__title title">Other</h2>
+
+                        <div class="audio__items">
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Card 1</span>
+                                    <p class="card__text" id="card-text-92">Rewrite the following text as a bottom line up front (BLUF) message formatted in Markdown. The format of the message should be made of two parts:
+                                        <br>• The first part should be written in bold and convey the message's key information. It can either be a statement or a question. Don't lose any important detail in this part.
+                                        <br>• The second part should be put onto a new line. This should give more details and provide some background about the message.
+                                        <br>• Make sure the message stays concise and clear so that readers don't lose extra time reading it.<br><br>Text: " .... "</p>
+                                    <button id="copy-button" onclick="copyText(92)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Card 2</span>
+                                    <p class="card__text" id="card-text-93">Generate a markdown list of action items to complete based on the text, using a unique identifier for each item as bold headings. If there are any errors in the text, make action items to fix them. In a sublist of each item, provide a description, priority, estimated level of difficulty, and a reasonable duration for the task.<br><br>Text: " .... "</p>
+                                    <button id="copy-button" onclick="copyText(93)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Card 3</span>
+                                    <p class="card__text" id="card-text-94">Now you are my coach. Your goal is to help me by asking questions. You will follow the following process:<br>"...."<br> 1. Your first response will be to ask me what question do I have. I will provide my answer, but we will need to improve it through continual iterations by going through the next steps. 2. Based on my input, you will generate 2 sections: a) your best possible current suggestion b) question (ask just one most powerful question pertaining to what will lead me to my wholeness and insight) 3. We will continue this iterative process with me providing additional information to you and you updating the suggestion and question</p>
+                                    <button id="copy-button" onclick="copyText(94)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Card 4</span>
+                                    <p class="card__text" id="card-text-95">Carefully read the product reviews below. Translate them to English and create a summary of all the reviews in English and list them as Pros and Cons in the bullet point format. Remember that each bullet point should be one sentence or at max two short sentences. Most frequently mentioned should come first in each list and every bullet point should have a percentage showing how much evidence the reviews have brought for that pro or con. For example if reviews are mentioning that product is going bad easily and they brought some reasons for what they are saying, the percentage of your confidence should go higher, but if there are some reviews which are unsure about something or there are no evidence or it's not repeated frequently then the percentage should go lower. At the end you should write a paragraph about what I should pay attention to, before buying this product. These can be some warnings or some tips or some suggestions, points that I will miss, or anything that you think is important to know before buying this product.
+                                        <br><br>
+                                        You can use the following template to create the summary:
+                                        <br><br>
+                                        '''
+                                        <br>## Summary of the reviews
+                                        <br><br>
+                                        **✅ Pros:**<br>
+                                        <br>- Pro 1 - percentage of your confidence%
+                                        <br>- Pro 2 - percentage of your confidence%
+                                        <br>...
+                                        <br>- Pro n - percentage of your confidence%
+                                        <br><br>
+                                        <br>**❌ Cons:**
+                                        <br>- Con 1 - percentage of your confidence%
+                                        <br>- Con 2 - percentage of your confidence%
+                                        <br>...
+                                        <br>- Con n - percentage of your confidence%
+                                        <br><br>
+                                        <br>**💡 You should pay attention to:**
+                                        <br>- Tip 1
+                                        <br>- Tip 2
+                                        <br>...
+                                        <br>- Tip n
+                                        <br>'''
+                                        <br><br>
+                                        - Product reviews: </p>
+                                    <button id="copy-button" onclick="copyText(95)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Card 5</span>
+                                    <p class="card__text" id="card-text-96">Based on the text, generate an "imagine prompt" that contains a maximum word count of 1,500 words that will be used as input for an AI-based text to image program called MidJourney based on the following parameters: /imagine prompt: [1], [2], [3], [4], [5], [6]
+                                        <br><br>
+                                        In this prompt, [1] should be replaced with a random subject and [2] should be a short concise description about that subject. Be specific and detailed in your descriptions, using descriptive adjectives and adverbs, a wide range of vocabulary, and sensory language. Provide context and background information about the subject and consider the perspective and point of view of the image. Use metaphors and similes sparingly to help describe abstract or complex concepts in a more concrete and vivid way. Use concrete nouns and active verbs to make your descriptions more specific and dynamic.
+                                        <br><br>  
+                                        [3] should be a short concise description about the environment of the scene. Consider the overall tone and mood of the image, using language that evokes the desired emotions and atmosphere. Describe the setting in vivid, sensory terms, using specific details and adjectives to bring the scene to life.
+                                        <br><br>
+                                        [4] should be a short concise description about the mood of the scene. Use language that conveys the desired emotions and atmosphere, and consider the overall tone and mood of the image.
+                                        <br><br>
+                                        [5] should be a short concise description about the atmosphere of the scene. Use descriptive adjectives and adverbs to create a sense of atmosphere that considers the overall tone and mood of the image.
+                                        <br><br>
+                                        [6] should be a short concise description of the lighting effect including Types of Lights, Types of Displays, Lighting Styles and Techniques, Global Illumination and Shadows. Describe the quality, direction, colour and intensity of the light, and consider how it impacts the mood and atmosphere of the scene. Use specific adjectives and adverbs to convey the desired lighting effect, consider how the light will interact with the subject and environment.
+                                        <br><br>
+                                        It's important to note that the descriptions in the prompt should be written back to back, separated with commas and spaces, and should not include any line breaks or colons. Do not include any words, phrases or numbers in brackets, and you should always begin the prompt with "/imagine prompt: ".
+                                        <br><br>
+                                        Be consistent in your use of grammar and avoid using cliches or unnecessary words. Be sure to avoid repeatedly using the same descriptive adjectives and adverbs. Use negative descriptions sparingly, and try to describe what you do want rather than what you don't want. Use figurative language sparingly and ensure that it is appropriate and effective in the context of the prompt. Combine a wide variety of rarely used and common words in your descriptions.
+                                        <br><br>
+                                        The "imagine prompt" should strictly contain under 1,500 words. Use the end arguments "--c X --s Y --q 2" as a suffix to the prompt, where X is a whole number between 1 and 25, where Y is a whole number between 100 and 1000 if the prompt subject looks better vertically, add "--ar 2:3" before "--c" if the prompt subject looks better horizontally, add "--ar 3:2" before "--c" Please randomize the values of the end arguments format and fixate --q 2. Please do not use double quotation marks or punctuation marks. Please use randomized end suffix format. Text: </p>
+                                    <button id="copy-button" onclick="copyText(96)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            <div class="audio__item">
+                                <div class="card">
+                                    <span class="card__title">Persanal Coach</span>
+                                    <p class="card__text" id="card-text-97">I want you become my coach in the transformational model of coaching. I would also call it Granular coaching. Transformational Models / granular coaching  • Transformational models assume humans are naturally whole and self-healing.  • Humans have the inner resources they need to grow, develop, and transform, that is, to move through something into another state.  • They have the creativity, the courage, and the wisdom they need to be healthy and productive.  • Humans may be stuck, but they are not broken.  • Humans are always at choice, even if the choice is to remain stuck.  • Parts of us may believe we are broken, but at our core we are not, indeed, cannot be broken.  Whatever the situation, it is an invitation to move through it into another state.  • Transformational models are often constraint-release models; you simply need to remove the constraints to release the resources that are already present. Part the clouds, and the sun will shine.  • Transformational models see past the symptoms to the wholeness within.  • Granular coaching subscribes to the transformational model of human beings and their capacity to change.    You will ask me questions Asking Powerful Questions   Simple, open-ended questions Grounded in curiosity and intuition About discovery, sending client on a journey of self-exploration Deepen awareness or create new learning Open new perspectives; bring clarity; evoke insight Can also propel a client into action Come from holding the client's agenda   Best practices  Short: 7 words or less o Usually begin with "What" Come from curiosity, rather knowing the answer Ask one question at a time, then listen for its impact Avoid (a guideline, not a rule) Long questions or multipart questions "Why" questions—ask for story or analysis and tend to create defensiveness Close-ended questions: yes/no questions § Though such questions are good for getting alignment or clarification o Informational questions: coaches need very little information Leading questions: questions that are designed to lead to a certain answer Asking “How” before the client has a critical mass of Self   Examples of good short, open-ended questions: What do you want from this session What's important about that? What's at stake? What are you longing for? What matters most? What's possible? What brings your alive? What's another way of looking at that What's the big-picture view of this situation? What's true now? What's in the way? Coaches assume that their clients are naturally whole, creative, and resourceful, that they already have what they need for fulfilling lives.  Coaching focuses on supporting functioning clients actualize their potential: to improve their performance, to envision the future, and to set and achieve meaningful goals. In other words, coaches help their clients to function optimally.   Coaching is a collaborative, non-pathologizing form of personal and professional evolution. To ask next question sometimes it helps to assume you are me and ask out of my natural curiosity.  To help me achieve critical mass of self it helps sometimes to focus my attention through you question on my current emotional and visceral states. Use reasoning that goes from general to friendly, informal style. Forms general conclusions from specific observations, encouraging pattern recognition and broader theories. Imagine that you are a good friend of mine.</p>
+                                    <button id="copy-button" onclick="copyText(97)" class="card__copy-btn">Copy</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                
+                <!-- <section class="content__gallary gallary">
+                    <h2 class="gallary__title title">Some of the most beautiful places in the planet</h2>
+                    <div class="gallary__items">
+                        <div class="gallary__item gallary__item_big">
+
+                            <div class="card">
+                                <h3>Card 7</h3>
+                                <p id="card-text-7">Simulate three brilliant, logical experts collaboratively answering a question. Each one verbosely explains their thought process in real-time, considering the prior explanations of others and openly acknowledging mistakes. At each step, whenever possible, each expert refines and builds upon the thoughts of others, acknowledging their contributions. They continue until there is a definitive answer to the question. For clarity, your entire response should be in a markdown table. The question is: "I want you to act as a senior Frontend developer. I will describe the details of the project, you will code the project using these tools: HTML, CSS, JavaScript. Your task is to create the markup of a single HTML page. My first request is to create a page for cards with text that combines the card into a grid of three elements in a row to the right of which there is a sidebar of three items. "</p>
+                                <button id="copy-button" onclick="copyText(7)" class="copy-btn">Copy</button>
+                            </div>
+                            
+                        </div>
+                        <div class="gallary__item">
+                            
+                            <div class="card">
+                                <h3>Card 8</h3>
+                                <p id="card-text-8">QuisqueS conW2ices.</p>
+                                <button id="copy-button" onclick="copyText(8)" class="copy-btn">Copy</button>
+                            </div>
+                            
+                        </div>
+                        <div class="gallary__item">
+                            <div class="card">
+                                    <h3>Card 6</h3>
+                                    <p id="card-text-6">QuisqueS conW2ices.</p>
+                                    <button id="copy-button" onclick="copyText(6)" class="copy-btn">Copy</button>
+                                </div>
+                        </div>
+                        <div class="gallary__item">
+                            <div class="card">
+                                    <h3>Card 6</h3>
+                                    <p id="card-text-6">QuisqueS conW2ices.</p>
+                                    <button id="copy-button" onclick="copyText(6)" class="copy-btn">Copy</button>
+                                </div>
+                        </div>
+                        <div class="gallary__item">
+                            <div class="card">
+                                    <h3>Card 6</h3>
+                                    <p id="card-text-6">QuisqueS conW2ices.</p>
+                                    <button id="copy-button" onclick="copyText(6)" class="copy-btn">Copy</button>
+                                </div>
+                        </div>
+                        <div class="gallary__item">
+                            <div class="card">
+                                    <h3>Card 6</h3>
+                                    <p id="card-text-6">QuisqueS conW2ices.</p>
+                                    <button id="copy-button" onclick="copyText(6)" class="copy-btn">Copy</button>
+                                </div>
+                        </div>
+                        <div class="gallary__item">
+                            <div class="card">
+                                    <h3>Card 6</h3>
+                                    <p id="card-text-6">QuisqueS conW2ices.</p>
+                                    <button id="copy-button" onclick="copyText(6)" class="copy-btn">Copy</button>
+                                </div>
+                        </div>
+                        <div class="gallary__item gallary__item_big">
+                            <div class="card">
+                                    <h3>Card 6</h3>
+                                    <p id="card-text-6">QuisqueS conW2ices.</p>
+                                    <button id="copy-button" onclick="copyText(6)" class="copy-btn">Copy</button>
+                                </div>
+                        </div>
+                        <div class="gallary__item">
+                            <div class="card">
+                                    <h3>Card 6</h3>
+                                    <p id="card-text-6">QuisqueS conW2ices.</p>
+                                    <button id="copy-button" onclick="copyText(6)" class="copy-btn">Copy</button>
+                                </div>
+                        </div>
+                        <div class="gallary__item">
+                            <div class="card">
+                                    <h3>Card 6</h3>
+                                    <p id="card-text-6">QuisqueS conW2ices.</p>
+                                    <button id="copy-button" onclick="copyText(6)" class="copy-btn">Copy</button>
+                                </div>
+                        </div>
+                    </div>
+                </section> -->
+            </section>
+                
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__copy">Alexei Ovsyannikov © 2023</div>
+            <div class="footer__text"><a target="_blank" href="https://github.com/pink-doublethink/NeuralPrompt/" rel="nofollow" class="footer__link">GitHub Repo</a></div>
+        </footer>
+    </div>
+    <script src="./js/app.js"></script>
+</body>
+</html>
