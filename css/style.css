@@ -14,22 +14,22 @@
 
 
 :root {
-    --background-primary: #d8c3a5;
-    --background-secondary: #eae7dc;
-    --glare:#FBEEC1;
-    --shade:#eae7dc;
+    --background-primary: #eae7dc;
+    --background-secondary: #dcddde;
+    --glare: #FBEEC1;
+    --shade:#dcddde;
     --text-normal: #000;
-    --text-normal-hover:#5d5c61;
-    --text-accent: #5d5c61;
-    --text-accent-hover: #5a92b2;
-    --text-muted: #eae7dc;
+    --text-normal-hover:#5d5c99;
+    --text-accent: #5d5c99;
+    --text-accent-hover: #5d5c99;
+    --text-muted: #5d5c61;
     --text-tilte: #5d5c61;
-    --btn: #d8c3a5;
+    --btn: #eae7dc;
     --radio:#000;
-    --btn-border: #eae7dc;
-    --hover: #eae7dc;
-    --active: #d8c3a5;
-    --gradient: var(--gradient-15);
+    --btn-border: #5d5c61;
+    --hover: #dcddde;
+    --active: #eae7dc;
+    --gradient: linear-gradient(180deg, #E5F7FF 0%, rgba(255, 255, 255, 0.00) 100%);
 }
    
 
