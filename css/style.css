@@ -29,7 +29,7 @@
     --btn-border: #5d5c61;
     --hover: #dcddde;
     --active: #eae7dc;
-    --gradient: linear-gradient(180deg, #E5F7FF 0%, rgba(255, 255, 255, 0.00) 100%);
+    --gradient: linear-gradient(to bottom right,#1f005c,#5b0060,#870160,#ac255e,#ca485c,#e16b5c,#f39060,#ffb56b);
 }
    
 
