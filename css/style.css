@@ -14,22 +14,22 @@
 
 
 :root {
-    --background-primary: #eae7dc;
+    --background-primary: #d8cb9d;
     --background-secondary: #dcddde;
     --glare: #FBEEC1;
     --shade:#dcddde;
     --text-normal: #000;
     --text-normal-hover:#5d5c99;
     --text-accent: #5d5c99;
-    --text-accent-hover: #5d5c99;
+    --text-accent-hover: #004e8f;
     --text-muted: #5d5c61;
     --text-tilte: #043257;
-    --btn: #eae7dc;
-    --radio:#000;
+    --btn: #d8cb9d;
+    --radio:#043257;
     --btn-border: #5d5c61;
     --hover: #dcddde;
-    --active: #eae7dc;
-    --gradient: linear-gradient(to bottom right,#1f005c,#5b0060,#870160,#ac255e,#ca485c,#e16b5c,#f39060,#ffb56b);
+    --active: #ebe4ca;
+    --gradient: linear-gradient(to bottom right,#c7d2fe,#fecaca,#fef3c7);
 }
    
 
