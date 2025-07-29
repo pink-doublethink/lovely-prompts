@@ -45,12 +45,12 @@
                               <span class="icon-btn">
                                 <span class="icon"></span>
                               </span>
-                            </label> 
+                            </label>
                         <div class="color-scheme-dropdown-inner">
                         <label id="light-label" class="color-scheme-label" for="light">
                           <span class="dark-mode-hide">Light mode</span>
                           <span class="light-mode-hide">Dark mode</span>
-                        </label>  
+                        </label>
                         <label id="dark-label" class="color-scheme-label" for="dark">
                           <span class="light-mode-hide">Light mode</span>
                           <span class="dark-mode-hide">Dark mode</span>
@@ -72,7 +72,7 @@
                 <nav class="sidebar__menu">
                     <ul class="sidebar__lists">
                         <ul class="sidebar__lists">
-                            <li class="sidebar__item"><a href="#thinking" class="sidebar__link">Creating thinking chains</a></li>
+                            <li class="sidebar__item"><a href="#thinking" class="sidebar__link">Промпты из роликов</a></li>
                             <li class="sidebar__item"><a href="#languages" class="sidebar__link">Learning natural languages</a></li>
                             <li class="sidebar__item"><a href="#uninteresting" class="sidebar__link">Delegate social activities</a></li>
                             <li class="sidebar__item"><a href="#schedule" class="sidebar__link">Create a schedule</a></li>
@@ -91,35 +91,54 @@
                         <div class="audio__items">
                             <div class="audio__item">
                                 <div class="card">
-                                    <span class="card__title">Collaborative QA</span>
-                                    <p id="card-text-1" class="card__text">Simulate three brilliant, logical experts collaboratively answering a question. Each one verbosely explains their thought process in real-time, considering the prior explanations of others and openly acknowledging mistakes. At each step, whenever possible, each expert refines and builds upon the thoughts of others, acknowledging their contributions. Think step by step.<br><br>The question is: " "</p>
+                                    <span class="card__title">Conversational Prompt Engineering</span>
+                                    <p id="card-text-1" class="card__text">Ваша роль - ассистент по созданию оптимального промта с помощью модели ORPA. Ваша цель - через серию вопросов и действий сформулировать промт, который наилучшим образом поможет пользователю решить его задачу.
+                                    <br><br>
+                                    Шаги:
+                                    1. Опрос (О): Задайте пользователю уточняющие вопросы, чтобы лучше понять его задачу, цели и контекст. Например:<br>
+                                    <user_questions><br>
+                                    - В чем заключается ваша задача?<br>
+                                    - Какой результат вы хотите получить?<br>
+                                    - Какие особенности и ограничения нужно учесть?<br>
+                                    </user_questions><br><br>
+
+                                    1. Рефлексия (Р): Проанализируйте ответы пользователя и сформулируйте ключевые требования и критерии успеха для промта. Определите, какие аспекты особенно важны.<br>
+                                    <answer_analysis><br>
+                                    {{Result}}<br>
+                                    </answer_analysis><br>
+
+                                    <key_requirements><br>
+                                    {{Result}}<br>
+                                    </key_requirements><br><br>
+
+                                    3. Планирование (П): Основываясь на результатах анализа, составьте черновой вариант промта. Включите главные компоненты:<br>
+                                    <draft_prompt><br>
+                                    - Инструкция/описание задачи<br>
+                                    - Примеры входных и выходных данных (если нужно)<br>
+                                    - Ожидаемый формат ответа<br>
+                                    - Любые специфические указания<br>
+                                    </draft_prompt><br><br>
+
+                                    3. Адаптация (А): Покажите черновик пользователю и спросите его обратную связь:<br>
+                                    <feedback><br>
+                                    - Насколько этот промт отражает вашу задачу? <br>
+                                    - Что бы вы хотели изменить или добавить?<br>
+                                    </feedback><br>
+                                    <br><br>
+                                    На основе обратной связи уточните и доработайте промт. Повторяйте цикл ОРПА, пока пользователь не будет удовлетворен.<br>
+                                    <br><br>
+                                    <final_prompt><br>
+                                    {{Result}}<br>
+                                    </final_prompt><br>
+                                    <br><br>
+                                    В результате этого диалога, управляемого моделью ОРПА, вы поэтапно придете к оптимальному промту, отвечающему потребностям пользователя и позволяющему эффективно решить его задачу.</p>
                                     <button id="copy-button" onclick="copyText(1)" class="card__copy-btn">Copy</button>
                                 </div>
                             </div>
-                            <div class="audio__item">
-                                <div class="card">
-                                    <span class="card__title">Two Expert Debate</span>
-                                    <p id="card-text-2" class="card__text">Simulate an in-depth discussion between expertA and expertB in the area of "...". The discussion can contain a maximum of 10 responses from each. One suggests a method, the other criticizes and suggests an improved approach, and so on and so forth. Think step by step.</p>
-                                    <button id="copy-button" onclick="copyText(2)" class="card__copy-btn">Copy</button>
-                                </div>
-                            </div>
-                            <div class="audio__item">
-                                <div class="card">
-                                    <span class="card__title">Self-Evaluation Plan</span>
-                                    <p id="card-text-3" class="card__text">I am preparing for a performance review at my company where my work is evaluated against three key attributes: {attributes 1, attributes 2, attributes 3}<br>As part of this process, I need to write a self-assessment that reflects my contributions over the last two quarters. I would like this self-assessment to justify a high performance rating <br>To help with this task, I will provide definitions for each of three attributes and a summary of my projects and contributions. I would like you to:<br>1. Assign each of my projects to one three attributes where it best fits. Please ensure that each project is only assigned once.<br>2. Write a positive and detailed self-assessment how my project demonstrete my proficiency in that area. Include specific examples and details.<br>3. Higlight the impact of my work by including quantifiable metrics where possible. If I haven't provided any, please suggest relevant metics that could be used to measure the impact of my work.<br>Here are the definitions of the attributes:<br>[insert attribute definitions here]<br>And here are the projects and contributions I've made over quarters:<br>[insert project summaries and contributions here]</p>
-                                    <button id="copy-button" onclick="copyText(4)" class="card__copy-btn">Copy</button>
-                                </div>
-                            </div>
-                            <div class="audio__item">
-                                <div class="card">
-                                    <span class="card__title">Expert Conversation</span>
-                                    <p id="card-text-3" class="card__text">Imagine a conversation between two experts: ExpertA and ExpertB Both are expert in expert in and have deep expert knowledge related to the following fields ... . Think step by step.</p>
-                                    <button id="copy-button" onclick="copyText(3)" class="card__copy-btn">Copy</button>
-                                </div>
-                            </div>
+
                         </div>
                     </section>
-            
+
                     <section class="content__section  audio" id="languages">
                         <h2 class="audio__title title">Learning Natural Languages</h2>
 
@@ -210,7 +229,7 @@
                             </div>
                         </div>
                     </section>
-            
+
                     <section class="content__section  audio" id="uninteresting">
                         <h2 class="audio__title title">Delegate Social Activities</h2>
 
@@ -285,7 +304,7 @@
                             </div>
                         </div>
                     </section>
-            
+
                     <section class="content__section  audio" id="schedule">
                         <h2 class="audio__title title">Create a Daily / Weekly Schedule</h2>
 
@@ -327,7 +346,7 @@
                             </div>
                         </div>
                     </section>
-            
+
                     <section class="content__section  audio" id="exploring">
                         <h2 class="audio__title title">Exploring Common Ideas</h2>
 
@@ -400,7 +419,7 @@
                             </div>
                         </div>
                     </section>
-            
+
                     <section class="content__section  audio" id="code">
                         <h2 class="audio__title title">Code creation, testing</h2>
 
@@ -470,7 +489,7 @@
                             </div>
                         </div>
                     </section>
-            
+
                     <section class="content__section  audio" id="conversations">
                         <h2 class="audio__title title">Fun</h2>
 
@@ -521,7 +540,7 @@
                             </div>
                         </div>
                     </section>
-                    
+
                     <section class="content__section  audio" id="other">
                         <h2 class="audio__title title">Other</h2>
 
@@ -586,7 +605,7 @@
                                     <p class="card__text" id="card-text-96">Based on the text, generate an "imagine prompt" that contains a maximum word count of 1,500 words that will be used as input for an AI-based text to image program called MidJourney based on the following parameters: /imagine prompt: [1], [2], [3], [4], [5], [6]
                                         <br><br>
                                         In this prompt, [1] should be replaced with a random subject and [2] should be a short concise description about that subject. Be specific and detailed in your descriptions, using descriptive adjectives and adverbs, a wide range of vocabulary, and sensory language. Provide context and background information about the subject and consider the perspective and point of view of the image. Use metaphors and similes sparingly to help describe abstract or complex concepts in a more concrete and vivid way. Use concrete nouns and active verbs to make your descriptions more specific and dynamic.
-                                        <br><br>  
+                                        <br><br>
                                         [3] should be a short concise description about the environment of the scene. Consider the overall tone and mood of the image, using language that evokes the desired emotions and atmosphere. Describe the setting in vivid, sensory terms, using specific details and adjectives to bring the scene to life.
                                         <br><br>
                                         [4] should be a short concise description about the mood of the scene. Use language that conveys the desired emotions and atmosphere, and consider the overall tone and mood of the image.
